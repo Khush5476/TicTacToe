@@ -74,6 +74,7 @@ body{
     cursor: pointer;
     animation: fade;
     animation-duration: 1.5s;
+    
 }
 
 .cell:hover{
@@ -150,7 +151,9 @@ body{
     font-family: cursive;
     animation: fade;
     animation-duration: 1.5s;
+    font-size: 3rem;
  }
+ 
 
  @keyframes fade {
     from {opacity: .5;}
@@ -188,3 +191,14 @@ body{
   .active {
     background-color: #04AA6D;
   }
+
+.greenText {
+    color: hsl(130, 84%, 54%);
+    font-size: 3rem;
+
+}
+    
+.orangeText{
+    color: hsl(44, 100%, 50%);
+
+}
