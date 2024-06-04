@@ -1,6 +1,7 @@
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
+const resultDisplay = document.getElementById("resultDisplay");
 const winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -48,6 +49,7 @@ function changePlayer(){
 }
 
 function checkWinner(){
+
     let roundWon = false;
 
     for(let i = 0; i < winConditions.length; i++){
@@ -58,20 +60,27 @@ function checkWinner(){
 
         if(cellA == "" || cellB == "" || cellC == ""){
             continue;
+            
         }
         if(cellA == cellB && cellB == cellC){
+
             roundWon = true;
             break;
         }
     
     }
 
+
     if(roundWon){
         statusText.textContent = `${currentPlayer} wins`;
+        statusText.classList.add("greenText");  
+        cellContainer.classList.add("greenText");
         running = false;
     }
     else if(!options.includes("")){
         statusText.textContent = `Draw!`;
+        statusText.classList.add("orangeText"); 
+        cellContainer.classList.add("orangeText");
         running = false;
     }
     else{
@@ -85,5 +94,7 @@ function restartGame(){
     statusText.textContent = `${currentPlayer}'s turn`;
     cells.forEach(cell => cell.textContent = "");
     running = true;
+    statusText.classList.remove("greenText", "redText", "orangeText")
+    cellContainer.classList.remove("greenText", "orangeText"); 
     
 }
