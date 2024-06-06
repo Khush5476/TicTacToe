@@ -85,6 +85,7 @@ function checkWinner(){
     }
     else{
         changePlayer();
+        statusText.classList.add("whiteText"); 
     }
 }
 
@@ -94,7 +95,7 @@ function restartGame(){
     statusText.textContent = `${currentPlayer}'s turn`;
     cells.forEach(cell => cell.textContent = "");
     running = true;
-    statusText.classList.remove("greenText", "redText", "orangeText")
+    statusText.classList.remove("greenText", "orangeText", "whiteText")
     cellContainer.classList.remove("greenText", "orangeText"); 
     
 }

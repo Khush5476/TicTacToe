@@ -53,8 +53,11 @@
 
 
 body{
-    background-image:url(https://i.ytimg.com/vi/WQjpiLBIkuE/maxresdefault.jpg);
-    background-size: 100%;
+  min-height: 100vh;
+  background-image:url(https://www.shutterstock.com/image-vector/plane-night-sky-airplane-flying-600nw-1711248121.jpg);
+  background-size: cover;
+  background-position: center;
+
     align-items: center;
     justify-content: center;
     margin: 0;
@@ -75,12 +78,14 @@ body{
     animation: fade;
     animation-duration: 1.5s;
     
+    
 }
 
 .cell:hover{
     box-shadow: 0 0 5px 2px;
     background-color: hsla(0, 0%, 60%, 0.5);
     font-size: 55px;
+    
 
 }
 #gameContainer{
@@ -88,6 +93,7 @@ body{
     text-align: center;
     animation: fade;
     animation-duration: 1.5s;
+    
 }
 #cellContainer{
     display: grid;
@@ -96,6 +102,7 @@ body{
     margin: auto;
     animation: fade;
     animation-duration: 1.5s;
+    
 }
 
 #ok{
@@ -110,11 +117,13 @@ body{
     color: black;
     animation: fade;
     animation-duration: 1.5s;
-    background-color: hsl(0, 0%, 20%, 0.5);
+    background-color: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, .2);
 }
 
 #ok:hover{
-  background-color: hsl(0, 0%, 30%, 0.5);
+  background-color: hsl(0, 0%, 30%, 0.1);
 }
 
 #restartBtn{
@@ -152,7 +161,7 @@ body{
 }
 
  #statusText{
-    text-shadow: 0px 3px 10px black;
+
     font-family: cursive;
     animation: fade;
     animation-duration: 1.5s;
@@ -207,5 +216,11 @@ body{
 .orangeText{
     color: hsl(44, 100%, 50%);
     text-shadow: 0px 3px 10px;
+
+}
+.whiteText{
+  color: white;
+  text-shadow: 0px 3px 10px white;
+
 
 }
