@@ -229,3 +229,9 @@ body{
 
 
 }
+
+@media (max-width:1400px) {
+  .click ul{
+      grid-template-columns: repeat(4, 2fr);
+  }
+}
